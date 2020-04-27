@@ -2,19 +2,22 @@
 
 namespace App\Services;
 
-use Guzzlehttp\Client;
+// -- ここから追加
+use GuzzleHttp\Client;
+// -- ここまで追加
 
-class Gurunavi{
-  public function SearchRestaurants($word)
-  {
-    $client = new Client();
-    $response = $client
-      ->get('https://api.gnavi.con.jp/RestSearchAPI/v3', [
-        'query' => [
-          'keyid' => env('GURUVAVI_ACCESS_KEY'),
-          'freeword' => str_replace(' ', ',', $word),
-        ],
-      ]);
-    return json_decode($response->getBody()->getContents(), true);
-  }
+class Gurunavi
+{    
+    public function searchRestaurants($word)
+    {
+        $client = new Client();
+        $response = $client
+            ->get('https://api.gnavi.co.jp/RestSearchAPI/v3/', [
+                'query' => [
+                    'keyid' => env('GURUNAVI_ACCESS_KEY'),
+                    'freeword' => str_replace(' ', ',', $word),
+                ],
+            ]);
+        return json_decode($response->getBody()->getContents(), true);
+    }
 }
