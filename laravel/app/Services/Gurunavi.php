@@ -12,7 +12,7 @@ class Gurunavi{
       ->get('https://api.gnavi.con.jp/RestSearchAPI/v3', [
         'query' => [
           'keyid' => env('GURUVAVI_ACCESS_KEY'),
-          'freeword' => str_replace(' ', ' ', $word),
+          'freeword' => str_replace(' ', ',', $word),
         ],
       ]);
     return json_decode($response->getBody()->getContents(), true);
