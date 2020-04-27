@@ -2,9 +2,7 @@
 
 namespace App\Services;
 
-// -- ここから追加
 use GuzzleHttp\Client;
-// -- ここまで追加
 
 class Gurunavi
 {    
