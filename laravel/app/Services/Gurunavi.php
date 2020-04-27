@@ -15,6 +15,7 @@ class Gurunavi
                     'keyid' => env('GURUNAVI_ACCESS_KEY'),
                     'freeword' => str_replace(' ', ',', $word),
                 ],
+                'http_errors' => false,
             ]);
         return json_decode($response->getBody()->getContents(), true);
     }
