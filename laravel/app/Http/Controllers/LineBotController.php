@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
 use LINE\LINEBot;
+use LINE\LINEBot\Event\MessageEvent\TextMessage;
 use LINE\LINEBot\HTTPClient\CurlHTTPClient;
 
 class LineBotController extends Controller
@@ -56,7 +57,7 @@ class LineBotController extends Controller
             }
 
             $replyToken = $event->getReplyToken();
-            $linebot->replyText($replyToken, $replyText);
+            $lineBot->replyText($replyToken, $replyText);
         }
     }
 }
