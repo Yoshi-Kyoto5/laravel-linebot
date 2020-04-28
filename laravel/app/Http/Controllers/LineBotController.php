@@ -31,8 +31,8 @@ class LineBotController extends Controller
 
         Log::debug($events);
 
-        foreach($events as $event){
-            if (!($event instanceof TextMessage)){
+        foreach ($events as $event) {
+            if (!($event instanceof TextMessage)) {
                 Log::debug('Non text message has come');
                 continue;
             }
