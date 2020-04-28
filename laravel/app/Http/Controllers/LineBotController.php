@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Services\Gurunavi;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -16,12 +15,13 @@ class LineBotController extends Controller
     public function index() {
         return view('linebot.index');
     }
-    public function restaurants(Request $request){
+    public function restaurants(Request $request)
+    {
         Log::debug($request->header());
         Log::debug($request->input());
 
         $httpClient = new CurlHTTPClient(env('LINE_ACCESS_TOKEN'));
-        $lineBot = new LINEBot($httpClient,['channelSecret' => env('LINE_CHANNEL_SECRET')]);
+        $lineBot = new LINEBot($httpClient, ['channelSecret' => env('LINE_CHANNEL_SECRET')]);
 
         $signature = $request->header('x-line-signature');
         if (!$lineBot->validateSignature($request->getContent(), $signature)) {
