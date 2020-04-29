@@ -16,4 +16,9 @@ class RestaurantBubbleBuilder implements ContainerBuilder
   private $longitude;
   private $phoneNumber;
   private $restaurantUrl;
+
+  public static function builder(): RestaurantBubbleBuilder
+  {
+    return new self();
+  }
 }
