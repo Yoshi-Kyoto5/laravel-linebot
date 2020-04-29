@@ -72,7 +72,7 @@ class LineBotController extends Controller
             }
 
             $carousel = CarouselContainerBuilder::builder();
-            $caoursel->setContents($bubbles);
+            $carousel->setContents($bubbles);
             
             $flex = FlexMessageBuilder::builder();
             $flex->setAltText('飲食店検索結果');
