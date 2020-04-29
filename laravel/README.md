@@ -11,6 +11,9 @@ Laravel-linebot
 - LINEアプリで投稿した内容を基に自動で飲食店検索し、その結果をLINE上で確認できる。
  そして、Gooleマップを開けたり、検索結果のお店に電話できる。
 
+# Features
+- オウム返しBot機能
+- 飲食店の検索機能
 
 <!-- <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
