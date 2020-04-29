@@ -1,1 +1,15 @@
-//
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.main {
+  width: 100vw;
+  background-color: #1a1d21;
+  h1 {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    margin: 0 auto;
+  }
+}
