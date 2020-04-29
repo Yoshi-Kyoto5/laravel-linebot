@@ -70,6 +70,9 @@ class LineBotController extends Controller
                 $bubble->setContents($restaurant);
                 $bubbles[] = $bubble; 
             }
+
+            $carousel = CarouselContainerBuilder::builder();
+            $caoursel->setContents($bubbles);
         }
     }
 }
