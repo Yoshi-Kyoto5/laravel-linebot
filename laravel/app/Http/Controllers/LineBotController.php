@@ -77,6 +77,8 @@ class LineBotController extends Controller
             $flex = FlexMessageBuilder::builder();
             $flex->setAltText('飲食店検索結果');
             $flex->setContents($carousel);
+            
+            $lineBot->replyMessage($event->getReplyToken(), $flex);
         }
     }
 }
