@@ -19,6 +19,9 @@ Laravel-linebot
 - PHP | Laravel | Docker | Laradock | Git | GitHub | heroku | ngrok |
   LINE Messaging API | line-bot-sdk | Gurunavi API | Flex Message | Guzzle |
 
+# Author 
+- Github: https://github.com/Yoshi-Kyoto5/
+
 <!-- <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
