@@ -15,6 +15,10 @@ Laravel-linebot
 - オウム返しBot機能
 - 飲食店の検索機能
 
+# Requirement
+- PHP | Laravel | Docker | Laradock | Git | GitHub | heroku | ngrok |
+  LINE Messaging API | line-bot-sdk | Gurunavi API | Flex Message | Guzzle |
+
 <!-- <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
