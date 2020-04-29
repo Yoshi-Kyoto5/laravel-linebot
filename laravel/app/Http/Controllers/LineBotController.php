@@ -53,16 +53,23 @@ class LineBotController extends Controller
                 continue;
             }
 
-            $replyText = '';
-            foreach($gurunaviResponse['rest'] as $restaurant) {
-                $replyText .=
-                    $restaurant['name'] . "\n" .
-                    $restaurant['url'] . "\n" .
-                    "\n";
-            }
+            // $replyText = '';
+            // foreach($gurunaviResponse['rest'] as $restaurant) {
+            //     $replyText .=
+            //         $restaurant['name'] . "\n" .
+            //         $restaurant['url'] . "\n" .
+            //         "\n";
+            // }
 
-            $replyToken = $event->getReplyToken();
-            $lineBot->replyText($replyToken, $replyText);
+            // $replyToken = $event->getReplyToken();
+            // $lineBot->replyText($replyToken, $replyText);
+
+            $bubbles = [];
+            foreach ($gurunaviResponse['rest'] as $restaurant) {
+                $bubble = RestaurantBubbleBuilder::builder();
+                $bubble->setContents($restaurant);
+                $bubbles[] = $bubble; 
+            }
         }
     }
 }
